@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://vasj3qx1ggpt"]
+
+[ext_resource type="Texture2D" uid="uid://c1q4p7120qt8y" path="res://assets/Bg.png" id="1_o5qli"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o5qli"]
+size = Vector2(20, 119)
+
+[node name="Main" type="Sprite2D" unique_id=1525533243]
+texture_filter = 1
+texture = ExtResource("1_o5qli")
+centered = false
+
+[node name="Player" type="StaticBody2D" parent="." unique_id=318570959]
+position = Vector2(50, 324)
+
+[node name="ColorRect" type="ColorRect" parent="Player" unique_id=1790118003]
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -60.0
+offset_right = 20.0
+offset_bottom = 60.0
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=1953088480]
+position = Vector2(10, -0.5)
+shape = SubResource("RectangleShape2D_o5qli")
+
+[node name="CPU" type="StaticBody2D" parent="." unique_id=782872172]
+position = Vector2(1082, 324)
+
+[node name="ColorRect" type="ColorRect" parent="CPU" unique_id=608123792]
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -60.0
+offset_right = 20.0
+offset_bottom = 60.0
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CPU" unique_id=92383827]
+position = Vector2(10, -0.5)
+shape = SubResource("RectangleShape2D_o5qli")
